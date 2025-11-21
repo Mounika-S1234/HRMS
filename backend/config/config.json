@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "youruser",
+    "password": "yourpassword",
+    "database": "hrms_db",
+    "host": "backend-db",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "test": {
+    "username": "youruser",
+    "password": "yourpassword",
+    "database": "hrms_db_test",
+    "host": "backend-db",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "production": {
+    "username": "youruser",
+    "password": "yourpassword",
+    "database": "hrms_db_prod",
+    "host": "backend-db",
+    "dialect": "postgres",
+    "port": 5432
+  }
+}

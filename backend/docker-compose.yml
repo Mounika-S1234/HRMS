@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend-app:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=backend-db
+      - DB_PORT=5432
+      - DB_USER=youruser
+      - DB_PASS=yourpassword
+      - DB_NAME=hrms_db
+      - JWT_SECRET=some_long_secret
+    depends_on:
+      - backend-db
+
+  backend-db:
+    image: postgres:14-alpine
+    container_name: backend-db
+    environment:
+      POSTGRES_USER: youruser
+      POSTGRES_PASSWORD: yourpassword
+      POSTGRES_DB: hrms_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
