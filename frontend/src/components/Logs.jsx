@@ -12,8 +12,8 @@ function Logs() {
     const fetchLogs = async () => {
       try {
         setLoading(true);
-        const response = await api.get('/logs');
-        setLogs(response.data);
+        const response = await api.get('/logs?limit=100');
+        setLogs(response.data.logs || response.data); // Handle both response formats
         setError('');
       } catch (err) {
         if (err.response && err.response.status === 401) {
