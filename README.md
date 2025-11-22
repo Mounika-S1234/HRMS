@@ -1,3 +1,14 @@
+# Status Form:
+
+# Please submit published link here:
+
+# Please submit GitHub link here: 
+https://github.com/Mounika-S1234/HRMS
+
+ # Please submit screen recording drive link here:
+1.https://www.loom.com/share/3c996f46cbe94f3b9417beee0b5dca32
+
+2.https://www.loom.com/share/12b28ec81ad04475889bb5b69a6f0a8d
 # 🎉 HRMS FRONTEND - COMPLETE IMPLEMENTATION ✅
 
 ## Quick Summary

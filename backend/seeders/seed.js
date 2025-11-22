@@ -2,7 +2,7 @@
 const bcrypt = require('bcryptjs');
 const { sequelize, Organisation, User, Employee, Team, EmployeeTeam, Log } = require('../src/models/associations');
 
-async function seedDatabase() {
+async function seedDatabase(){
   try {
     await sequelize.authenticate();
     console.log('✓ Database connection established');
