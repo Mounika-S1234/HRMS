@@ -1,20 +1,7 @@
-FROM node:20-slim
-
+FROM node:20-alpine
 WORKDIR /app
-
-RUN apt-get update && apt-get install -y python3 make g++ git \
-    && npm install -g npm@latest \
-    && apt-get clean
-
 COPY package*.json ./
-RUN npm ci
-
+RUN npm install
 COPY . .
-
-RUN groupadd -r appgroup && useradd -r -g appgroup appuser \
-    && chown -R appuser:appgroup /app
-
-USER appuser
-
 EXPOSE 5000
-CMD ["npm", "run", "dev"]
+CMD [ "npm", "run", "dev" ]
